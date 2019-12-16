@@ -27,8 +27,8 @@ public class BrowserTest {
 
 
 		driver.get("https://google.com/");
-		WebElement textBox = driver.findElement(By.xpath("//input[@name='q']"));
-		textBox.sendKeys("Hi Lena!!! I love You!!!"); 
+		/*WebElement textBox =*/ driver.findElement(By.xpath("//input[@name='q']")).sendKeys("I love Java , Selenium, Maven - Framework");
+		//textBox.sendKeys("Hi Lena!!! I love You!!!"); 
 		
 		try {
 			Thread.sleep(3000);
