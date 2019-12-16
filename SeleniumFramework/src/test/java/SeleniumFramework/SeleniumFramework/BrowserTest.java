@@ -1,5 +1,8 @@
 package SeleniumFramework.SeleniumFramework;
 
+//import java.awt.List;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,8 +30,11 @@ public class BrowserTest {
 
 
 		driver.get("https://google.com/");
-		/*WebElement textBox =*/ driver.findElement(By.xpath("//input[@name='q']")).sendKeys("I love Java , Selenium, Maven - Framework");
+		/*WebElement textBox =*/ driver.findElement(By.xpath("//input[@name='q']")).sendKeys("I love Java , Selenium, Maven Framework");
 		//textBox.sendKeys("Hi Lena!!! I love You!!!"); 
+		List<WebElement>elementList = driver.findElements(By.xpath("//input"));
+		int elementCount = elementList.size();
+		System.out.println("Element count: "+ elementCount);
 		
 		try {
 			Thread.sleep(3000);
