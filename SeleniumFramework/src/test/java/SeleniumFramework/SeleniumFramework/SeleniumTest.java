@@ -11,11 +11,11 @@ public class SeleniumTest {
 		//	WebDriverManager.chromedriver().version("2.36").setup();
 		//	WebDriver driver = new ChromeDriver();
 
-		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
+		//WebDriverManager.firefoxdriver().setup();
+		//WebDriver driver = new FirefoxDriver();
 
-		driver.get("https://google.com");
-		driver.close();
-		driver.quit();
+		///driver.get("https://google.com");
+	//	driver.close();
+	//	driver.quit();
 	}
 }
