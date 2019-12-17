@@ -2,19 +2,44 @@ package config;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Properties;
 
+/**
+ * Description: read/write to config.properties file
+ * @author mkbc3
+ * @date
+ */
 public class PropertiesFile {
+	private static final String NULL = null;
+	/**
+	 * Class variables definition
+	 */
 	static String projectPath; 
+	static Properties prop;
+	
+	
+	
 	public static void main(String[] args) {
+		projectPath = System.getProperty("user.dir");
+		prop = new Properties();
+		
 		readPropertiesFile();
+		writePropertiesFile();
+		//readPropertiesFile();
+		
 	}
 	
+	/**
+	 * Description read from java configuration file. In format key=value
+	 * @author mkbc3
+	 * @date
+	 */
 	public static void readPropertiesFile() {
 		
-		projectPath = System.getProperty("user.dir");
-		Properties prop = new Properties();
+		
 		
 		try {
 			InputStream inputStream = new FileInputStream( projectPath + "/src/main/java/config/config.properties");
@@ -25,6 +50,22 @@ public class PropertiesFile {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	/**
+	 * 
+	 */
+	public static void writePropertiesFile() {
+		
+		try {
+			OutputStream outputStream = new FileOutputStream(projectPath + "/src/main/java/config/config.properties");
+			prop.setProperty("browser", "Chrome");
+			prop.setProperty("result", "pass");			
+			prop.store(outputStream, NULL);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }
