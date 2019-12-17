@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import config.PropertiesFile;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserTest {
@@ -25,6 +28,7 @@ public class BrowserTest {
 		setBrowserConfig();
 		runTest();
 		clean_resources();
+		PropertiesFile.writePropertiesFile();
 	}
 	
 	/**
@@ -33,7 +37,9 @@ public class BrowserTest {
 	 * @date
 	 */
 	public static void setBrowser() {
-		browser = "Chrome";
+		//browser = "Chrome";
+		browser = PropertiesFile.readPropertiesFile();
+		System.out.println("Browser type: " + browser);
 	}
 	// 
 	/**
@@ -42,6 +48,7 @@ public class BrowserTest {
 	 * @date
 	 */
 	public static void setBrowserConfig() {
+		
 		if(browser.contains("Firefox")) {
 			System.setProperty("webdriver.gecko.driver", projectPath+"\\drivers\\geckodriver\\geckodriver.exe");
 			driver = new FirefoxDriver();

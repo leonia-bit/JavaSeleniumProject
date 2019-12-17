@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
+
 /**
  * Description: read/write to config.properties file
  * @author mkbc3
@@ -18,13 +19,10 @@ public class PropertiesFile {
 	 * Class variables definition
 	 */
 	static String projectPath; 
-	static Properties prop;
-	
-	
-	
+		
 	public static void main(String[] args) {
-		projectPath = System.getProperty("user.dir");
-		prop = new Properties();
+		
+		
 		
 		readPropertiesFile();
 		writePropertiesFile();
@@ -37,24 +35,30 @@ public class PropertiesFile {
 	 * @author mkbc3
 	 * @date
 	 */
-	public static void readPropertiesFile() {
-		
-		
+	public static String readPropertiesFile() {
+		Properties prop = new Properties();
+		projectPath = System.getProperty("user.dir");
 		
 		try {
 			InputStream inputStream = new FileInputStream( projectPath + "/src/main/java/config/config.properties");
 			// inputStream = new FileInputStream("C:\\Users\\mkbc3\\git\\JavaSeleniumProject\\SeleniumFramework\\src\\main\\java\\config\\config.properties");
 			prop.load(inputStream);
 			System.out.println(prop.getProperty("browser"));
+			 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		String browser = prop.getProperty("browser");
+		prop.clear();
+		return browser;
 	}
 	/**
 	 * 
 	 */
 	public static void writePropertiesFile() {
+		projectPath = System.getProperty("user.dir");
+		Properties prop = new Properties();
 		
 		try {
 			OutputStream outputStream = new FileOutputStream(projectPath + "/src/main/java/config/config.properties");
@@ -65,6 +69,7 @@ public class PropertiesFile {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		prop.clear();
 		
 	}
 
