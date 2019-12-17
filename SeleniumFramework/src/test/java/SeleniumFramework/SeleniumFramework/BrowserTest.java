@@ -26,11 +26,21 @@ public class BrowserTest {
 		runTest();
 	}
 
-	// setBrowser
+	
+	/**
+	 * Description: temporary set browser type
+	 * @author mkbc3
+	 * @date
+	 */
 	public static void setBrowser() {
 		browser = "Chrome";
 	}
-	// setBrowserConfig
+	// 
+	/**
+	 * Description: select browser according to configuration
+	 * @author mkbc3
+	 * @date
+	 */
 	public static void setBrowserConfig() {
 		if(browser.contains("Firefox")) {
 			System.setProperty("webdriver.gecko.driver", projectPath+"\\drivers\\geckodriver\\geckodriver.exe");
@@ -46,7 +56,12 @@ public class BrowserTest {
 			driver  = new InternetExplorerDriver();
 		}
 	}
-	// runTest
+	
+	/**
+	 * Description: invoke browser; find element by type; count all elements for this type.
+	 * @author mkbc3
+	 * @date
+	 */
 	public static void runTest() {
 		
 		driver.get("https://google.com/");
