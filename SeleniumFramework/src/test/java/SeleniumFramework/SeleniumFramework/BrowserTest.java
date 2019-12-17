@@ -26,7 +26,6 @@ public class BrowserTest {
 		runTest();
 		clean_resources();
 	}
-
 	
 	/**
 	 * Description: temporary set browser type
