@@ -24,6 +24,7 @@ public class BrowserTest {
 		setBrowser();
 		setBrowserConfig();
 		runTest();
+		clean_resources();
 	}
 
 	
@@ -58,7 +59,7 @@ public class BrowserTest {
 	}
 	
 	/**
-	 * Description: invoke browser; find element by type; count all elements for this type.
+	 * Description: invoke browser; find element by type; count all elements for this type; wait 3 sec
 	 * @author mkbc3
 	 * @date
 	 */
@@ -78,7 +79,14 @@ public class BrowserTest {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}		
+	}
+	/**
+	 * Description:
+	 * @author mkbc3
+	 * @date
+	 */
+	public static void clean_resources() {
 		driver.close();
 		driver.quit();
 	}
