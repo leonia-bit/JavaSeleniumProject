@@ -23,7 +23,6 @@ public class PropertiesFile {
 	public static void main(String[] args) {
 		
 		
-		
 		readPropertiesFile();
 		writePropertiesFile();
 		//readPropertiesFile();
@@ -41,7 +40,6 @@ public class PropertiesFile {
 		
 		try {
 			InputStream inputStream = new FileInputStream( projectPath + "/src/main/java/config/config.properties");
-			// inputStream = new FileInputStream("C:\\Users\\mkbc3\\git\\JavaSeleniumProject\\SeleniumFramework\\src\\main\\java\\config\\config.properties");
 			prop.load(inputStream);
 			System.out.println(prop.getProperty("browser"));
 			 
@@ -69,8 +67,7 @@ public class PropertiesFile {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		prop.clear();
-		
+		prop.clear();		
 	}
 
 }
