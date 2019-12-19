@@ -20,7 +20,7 @@ public class BrowserTest {
 
 
 	public static void main(String[] args) {
-		// Path set	
+		// Set path
 		projectPath = System.getProperty("user.dir");
 		System.out.println("Project path: "+ projectPath);
 		
