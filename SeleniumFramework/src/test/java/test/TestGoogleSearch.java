@@ -17,7 +17,7 @@ public class TestGoogleSearch {
 	 */
 	public static void googleSerch() {
 		/*
-		 * init chrome web driver
+		 * init chrome web driver.
 		 */
 		String projectPath = System.getProperty("user.dir");
 		System.out.println("Project path: "+ projectPath);
