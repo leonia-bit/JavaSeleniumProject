@@ -37,7 +37,6 @@ public class BrowserTest {
 	 * @date
 	 */
 	public static void setBrowser() {
-		//browser = "Chrome";
 		browser = PropertiesFile.readPropertiesFile();
 		System.out.println("Browser type: " + browser);
 	}
