@@ -25,7 +25,7 @@ public class TestGoogleSearch {
 		WebDriver driver = new ChromeDriver();
 		
 		/*
-		 * goto google.com
+		 * goto google.com site
 		 */
 		driver.get("https://google.com");
 		
