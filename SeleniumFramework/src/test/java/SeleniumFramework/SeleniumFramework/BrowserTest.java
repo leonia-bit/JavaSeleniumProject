@@ -71,11 +71,7 @@ public class BrowserTest {
 	public static void runTest() {
 		
 		driver.get("https://google.com/");
-<<<<<<< HEAD
 		//---------> Find element by xpath and set keys
-=======
-		//--------> Find element by xpath and set keys
->>>>>>> refs/heads/master
 		/*WebElement textBox =*/ driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Find input element by xpath");
 		//textBox.sendKeys("Find input element by xpath"); 
 		//---------->Find all input elements in the page
