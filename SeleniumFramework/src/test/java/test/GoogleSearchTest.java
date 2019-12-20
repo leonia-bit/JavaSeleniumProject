@@ -34,34 +34,34 @@ public class GoogleSearchTest {
 		driver.get("https://google.com");
 		
 		/*
-		 * enter text to search textbox
+		 * return search  text_box element
 		 */
 		WebElement element = GoogleSearchPage.textbox_search(driver);
 		
 		/*
-		 * click on submit
+		 * insert test to text_box search element
 		 */
 		 element.sendKeys("java keywords description");
+		 /*
+		  * Click to search button.
+		  */
          element.submit();
          
         /*
-         * wait 3 sec
+         * wait 3 seconds 
          */
      	try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
-
-		
+		}				
 		/*
 		 * close browser
 		 */
-		driver.close();
+		driver.close();	
 		driver.quit();
 		System.out.println("Test Comleted Successfully!!!");
-		
 		
 	}
 }
