@@ -10,8 +10,6 @@ public class GoogleSearchPageObjects {
 	WebDriver driver = null;	
 	
 	By textbox_search = By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input");
-	//By button_search = By.name("btnK");
-	
 	By button_search = By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]");
 	
 	public GoogleSearchPageObjects(WebDriver driver){
