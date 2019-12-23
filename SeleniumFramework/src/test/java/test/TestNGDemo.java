@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class TestNGDemo {
 
-	WebDriver driver = null;
+	static WebDriver driver = null;
 
 	@BeforeTest
 	public void setUpTest() {
